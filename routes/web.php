@@ -20,7 +20,14 @@
 //     return view('pages.shop'); // Blade location
 // });
 
+Route::resource('products', 'ProductsController');
+
 Route::get('/', 'PagesController@index');
 
-Route::get('shop', 'PagesController@shop');
+Route::get('/shop', 'PagesController@shop');
 
+
+
+Auth::routes();
+
+Route::get('/dashboard', 'DashboardController@index');
