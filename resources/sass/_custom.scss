@@ -1,19 +1,29 @@
 // Custom CSS
 
-.navbar {
-    margin-bottom: 0px;
+body {
+	background: rgba(192, 57, 43, 0.55);
+	margin: 0;
+	color: #fff;
+	font-family: $font-family-sans-serif;
 }
 
-.jumbotron {
-    height: 100vh;
+.showcase::after {
+	content:'';
+	height: 100vh;
+	width:100%;
+	// background-image: {{ asset("images/cover.jpeg") }};
+	background-image: url(/images/cover.jpeg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	display: block;
+    -webkit-filter: blur(10px);
+    -moz-filter: blur(10px);
+    filter: blur(10px);
+	transition: all 1000ms;
 }
 
-.carousel-item {
-  height: 100vh;
-  min-height: 300px;
-  background: no-repeat center center scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+.showcase:hover::after {
+	filter: blur(0px);
+	-webkit-filter: blur(0px);
 }
