@@ -2,7 +2,7 @@
 @section('content')
 <header class="showcase">
     <div class="content">
-        <img src="logo.png" alt="SERYE" class="logo">
+        <img src="{{ asset("images/logo-serye.png") }}" alt="SERYE" class="logo">
         <div class="title">
             Welcome to SERYE Online Shop
         </div>

@@ -20,6 +20,9 @@
 //     return view('pages.shop'); // Blade location
 // });
 
+
+Route::resource('.admin', 'AdminController@index');
+
 Route::resource('products', 'ProductsController');
 
 Route::get('/', 'PagesController@index');
@@ -31,3 +34,4 @@ Route::get('/shop', 'PagesController@shop');
 Auth::routes();
 
 Route::get('/dashboard', 'DashboardController@index');
+
