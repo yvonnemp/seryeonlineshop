@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use App\Product;
 use DB;
+use App\User;
 
 class ProductsController extends Controller
 {
@@ -186,7 +187,7 @@ class ProductsController extends Controller
             Storage::delete('public/product_img/'.$product->product_img);
         }
         
-        $product->delete;
+        $product->delete();
         return redirect('/products')->with('success', 'Product successfully removed!');
 
     }

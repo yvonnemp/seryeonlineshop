@@ -24,8 +24,6 @@ class AdminController extends Controller
      */
     public function index()
     {
-        $user_id = auth()->user()->id;
-        $user = User::find($user_id);
-        return view('dashboard')->with('products', $user->products);
+        return view('admin-dashboard');
     }
 }
